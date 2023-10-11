@@ -1,3 +1,46 @@
+@use '../../styles/mixins/grid' as *;
+
 .header{
   background: red;
+  padding-top: 40px;
+
+  .container {
+    @include container();
+    @include container-fixed();
+    display: flex;
+    align-items: center;
+
+    .logo {
+      @include make-md-column(4);
+      h3 {
+        color: #000;
+        //font-family: Inter;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 800;
+        line-height: normal;
+      }
+    }
+
+    .menu {
+      @include make-md-column(8);
+
+      .menu__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_item {
+
+          a {
+            color: #1F1F1F;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+    }
+  }
 }
