@@ -1,3 +1,5 @@
+@use '../common/variables' as *;
+
 // Boostrap Mixins and Variables are defined first.
 // Examples start at line 234.
 
@@ -333,5 +335,25 @@ $container-lg: $container-large-desktop !default;
     @include make-md-column-offset(2);
     @include make-lg-column(6);
     @include make-lg-column-offset(0);
+  }
+}
+
+@mixin container {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $WIDTH_HD) {
+    max-width: 1440px;
+  }
+
+  @media (max-width: $WIDTH_TABLET) {
+    max-width: 100vw;
+    padding: 0 32px;
+  }
+
+  @media (max-width: $WIDTH_WIDE_PHONE) {
+    max-width: 100vw;
+    padding: 0 20px;
   }
 }
