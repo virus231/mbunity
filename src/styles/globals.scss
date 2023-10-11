@@ -1,0 +1,102 @@
+@use 'common/variables' as *;
+
+@import 'common/reset';
+@import 'helpers/index';
+
+body,
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+details summary::-webkit-details-marker {
+  display: none;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: 'Helvetica', serif;
+  overflow-x: hidden !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  box-sizing: border-box;
+
+  &.disable-scroll {
+    //position: fixed;
+    height: 100%;
+
+    * {
+      overflow: hidden !important;
+    }
+
+    //overflow: hidden !important;
+    //main{
+    //  overflow: hidden !important;
+    //}
+  }
+}
+
+td {
+  position: relative;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+html {
+  box-sizing: border-box;
+  height: 100%;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+main {
+  padding-top: 60px;
+  overflow-x: hidden;
+  display: flex;
+  flex-flow: column;
+  align-items: stretch;
+}
+
+//@import 'common/fonts';
