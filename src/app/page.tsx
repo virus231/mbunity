@@ -1,10 +1,11 @@
-import Image from 'next/image';
-import styles from './page.module.scss';
+import {GroupTitles} from "~/components/GroupTitles/GroupTitles";
+import {ContactUsInfo} from "~/components/ContactUsInfo/ContactUsInfo";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-
-    </main>
+    <>
+        <GroupTitles title="Contact Us" subtitle="Any question or remarks? Just write us a message!"/>
+        <ContactUsInfo/>
+    </>
   );
 }

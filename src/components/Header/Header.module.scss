@@ -1,7 +1,6 @@
 @use '../../styles/mixins/grid' as *;
 
 .header{
-  background: red;
   padding-top: 40px;
 
   .container {
@@ -14,7 +13,7 @@
       @include make-md-column(4);
       h3 {
         color: #000;
-        //font-family: Inter;
+        font-family: var(--font-inter);
         font-size: 24px;
         font-style: normal;
         font-weight: 800;
@@ -33,6 +32,7 @@
         &_item {
 
           a {
+            font-family: var(--font-roboto);
             color: #1F1F1F;
             font-size: 16px;
             font-style: normal;

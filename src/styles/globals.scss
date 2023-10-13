@@ -33,7 +33,6 @@ section {
 
 body {
   line-height: 1;
-  font-family: 'Helvetica', serif;
   overflow-x: hidden !important;
   margin: 0 !important;
   padding: 0 !important;
@@ -93,10 +92,9 @@ html {
 
 main {
   padding-top: 60px;
-  overflow-x: hidden;
   display: flex;
   flex-flow: column;
   align-items: stretch;
 }
 
-//@import 'common/fonts';
+@import 'common/fonts';

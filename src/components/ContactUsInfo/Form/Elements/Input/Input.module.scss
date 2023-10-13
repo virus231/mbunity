@@ -1,0 +1,55 @@
+
+
+.field {
+  cursor: pointer;
+  &:hover {
+    .label {
+      color: #000;
+    }
+  }
+
+  .label {
+    color: #8D8D8D;
+    font-family: var(--font-poppins);
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+    transition: all .3s;
+  }
+
+  .element {
+    position: relative;
+
+    .input {
+      display: inline-block;
+      padding-bottom: 0.625rem;
+      border-bottom: 1px solid #8D8D8D;
+      outline-style: none;
+      width: 100%;
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+      padding-top: 5px;
+      color: #000;
+
+      font-family: var(--font-poppins);
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 20px;
+
+    }
+  }
+}
+
+.focused {
+  label {
+    color: #000 !important;
+  }
+
+  .input {
+    border-bottom: 1px solid #000 !important;
+    color: #000;
+  }
+}
