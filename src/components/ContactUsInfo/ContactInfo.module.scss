@@ -1,4 +1,6 @@
 @use '../../styles/mixins/grid' as *;
+@use '../../styles/common/variables' as *;
+@use '../../styles/helpers/svg.global' as *;
 
 .form__block {
   padding: 10px;
@@ -16,6 +18,23 @@
     left: 65%;
     width: 240px;
     height: 180px;
+
+    @media (max-width: $WIDTH_TABLET) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $WIDTH_TABLET) {
+    &::after {
+      content: '';
+      background: url('../../assets/icons/letter-send-mobile.svg') no-repeat;
+      position: absolute;
+      bottom: 0;
+      left: 35%;
+      width: 105px;
+      height: 85px;
+      display: block;
+    }
   }
 
   .left__block {
@@ -44,6 +63,10 @@
   .top__block {
     margin-bottom: 110px;
 
+    @media (max-width: $WIDTH_TABLET) {
+      margin-bottom: 12px;
+    }
+
     h5 {
       color: #fff;
       font-family: var(--font-poppins);
@@ -52,6 +75,12 @@
       font-weight: 600;
       line-height: normal;
       margin-bottom: 6px;
+
+      @media (max-width: $WIDTH_TABLET) {
+        text-align: center;
+        font-size: 20px;
+      }
+
     }
 
     p {
@@ -61,6 +90,12 @@
       font-style: normal;
       font-weight: 400;
       line-height: normal;
+
+      @media (max-width: $WIDTH_TABLET) {
+        text-align: center;
+        font-size: 11px;
+      }
+
     }
   }
 
@@ -69,21 +104,30 @@
     flex-direction: column;
     gap: 50px;
     margin-bottom: 160px;
+
+    @media (max-width: $WIDTH_TABLET) {
+      gap: 15px;
+    }
   }
 
   .bottom__info {
     display: flex;
     gap: 20px;
+    z-index: 1;
+    position: relative;
+
+    @media (max-width: $WIDTH_TABLET) {
+      justify-content: center;
+    }
 
     .icon__media__block {
-      display: flex;
-      align-items: center;
-      justify-content: center;
       width: 30px;
       height: 30px;
       background-color: #1b1b1b;
       border-radius: 50%;
       transition: all 0.3s;
+      @include center_and_size_svg();
+      @include svg_make_clickable();
 
       &:hover {
         background-color: #f2f3f5;

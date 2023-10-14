@@ -1,4 +1,4 @@
-@use '../styles/mixins/grid' as *;
+@use '../mixins/grid' as *;
 
 .main {
   @include container();

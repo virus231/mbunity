@@ -26,7 +26,6 @@ export const ContactUsForm = () => {
 
   const handleInputChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
-    console.log('e', e.target);
     setFormData((prevData) => ({ ...prevData, [name]: value }));
   };
 

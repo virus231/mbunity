@@ -1,7 +1,15 @@
+@use '../../../styles/common/variables' as *;
+
+
 .form {
   padding-top: 60px;
   padding-left: 50px;
   padding-right: 50px;
+
+  @media (max-width: $WIDTH_TABLET) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 
   &__fields {
     display: grid;
@@ -19,6 +27,10 @@
     justify-content: end;
     margin-top: 40px;
 
+    @media (max-width: $WIDTH_TABLET) {
+      margin-bottom: 60px;
+    }
+
     button {
       display: inline-flex;
       border-radius: 5px;
@@ -35,6 +47,11 @@
       font-style: normal;
       font-weight: 500;
       line-height: normal;
+
+      @media (max-width: $WIDTH_TABLET) {
+        width: 100%;
+        justify-content: center;
+      }
     }
   }
 }
