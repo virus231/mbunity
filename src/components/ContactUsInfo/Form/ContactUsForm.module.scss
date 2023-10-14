@@ -9,12 +9,19 @@
   @media (max-width: $WIDTH_TABLET) {
     padding-left: 10px;
     padding-right: 10px;
+    padding-top: 30px;
+
   }
 
   &__fields {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-gap: 40px;
+
+    @media (max-width: $WIDTH_TABLET) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+
+    }
   }
 
   .subject {
