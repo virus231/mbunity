@@ -6,13 +6,18 @@ import SVG_EMAIL from '~/svg/email.svg';
 import SVG_LOCATION from '~/svg/location.svg';
 import { FOOTER_LINKS } from '~/config/footer';
 import { NewsletterBlock } from '~/components/Footer/NewsletterBlock/NewsletterBlock';
+import {Logo} from "~/components/Logo/Logo";
 
 
 export const Footer = () => {
   return (
     <footer className={styles.footer}>
+        <div className={styles.logo}>
+            <Logo color="white" fontSize="36px"/>
+
+        </div>
+
       <div className={styles.container}>
-        <h4>Logo Here</h4>
         <hr />
         <div className={styles.footer__info}>
           <div className={styles.footer__info_block}>

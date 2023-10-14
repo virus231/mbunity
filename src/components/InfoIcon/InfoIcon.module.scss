@@ -1,7 +1,21 @@
+@use '../../styles/common/variables' as *;
+
+
 .info__icon_block {
   display: flex;
   gap: 25px;
   align-items: start;
+
+  @media (max-width: $WIDTH_TABLET) {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    a {
+      text-align: center;
+    }
+  }
 
   a {
     color: #fff;

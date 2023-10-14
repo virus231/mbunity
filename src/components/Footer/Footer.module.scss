@@ -1,9 +1,18 @@
 @use '../../styles/mixins/grid' as *;
 
 .footer {
+  display: flex;
+  flex-direction: column;
   background: #000;
   padding-top: 80px;
   padding-bottom: 66px;
+
+  .logo {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 40px;
+  }
 
   .container {
     @include container();
