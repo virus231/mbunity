@@ -1,7 +1,14 @@
+@use '../../../styles/common/variables' as *;
+
+
 .newsletter {
   border-radius: 10px;
   background: #131313;
   padding: 14px;
+  
+  @media (max-width: $WIDTH_TABLET) {
+    width: 350px;
+  }
 
   h6 {
     color: #fff;
