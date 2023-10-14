@@ -49,6 +49,34 @@ Start the server
 
 ---
 
+# My Project
+
+This project utilizes Git Flow for better project management and development.
+
+## Git Flow
+
+Git Flow is a branching model and development process that helps efficiently manage a project. By using Git Flow, we can work with various types of branches to organize development and prepare for releases effectively.
+
+### Primary Git Flow Branch Types:
+
+- **main**: The branch containing the stable version of the product.
+
+- **pre-release**: The branch where active development takes place.
+
+- **Features**: Branches created for developing new features. These branches are typically deleted after merging into the development branch.
+
+### Creating Git Flow Branches:
+
+- To create the development branch (develop): `git checkout -b pre-release`
+
+- To create a feature branch (feature/feature-name): `git checkout -b feature/feature-name`
+
+- To create a hotfix branch (hotfix/fix-name): `git checkout -b hotfix/fix-name`
+
+### Example Branches I've Added:
+
+- **Release Branch (release)**: `release
+
 ### About
 
 Please note that the project was created using the **Next.js** development environment. By launching the application, you will be directed to the main page of the site (**Home page**). The application includes a routing system, allowing you to navigate to the **Contact page** through the provided links.
