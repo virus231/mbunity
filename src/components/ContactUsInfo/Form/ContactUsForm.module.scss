@@ -1,0 +1,61 @@
+@use '../../../styles/common/variables' as *;
+
+.form {
+  padding-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+
+  @media (max-width: $WIDTH_TABLET) {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 30px;
+  }
+
+  &__fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 40px;
+
+    @media (max-width: $WIDTH_TABLET) {
+      grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+  }
+
+  .subject {
+    display: flex;
+    margin: 40px 0;
+  }
+
+  .btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+
+    @media (max-width: $WIDTH_TABLET) {
+      margin-bottom: 60px;
+    }
+
+    button {
+      display: inline-flex;
+      border-radius: 5px;
+      background: #000;
+      box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.12);
+      padding: 15px 48px;
+      align-items: flex-start;
+      gap: 10px;
+
+      color: #fff;
+      text-align: center;
+      font-family: var(--font-poppins);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @media (max-width: $WIDTH_TABLET) {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  }
+}

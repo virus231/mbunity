@@ -1,0 +1,10 @@
+@use '../../../styles/common/variables' as *;
+
+.burger {
+  display: none;
+
+  @media (max-width: $WIDTH_TABLET) {
+    display: flex;
+    justify-content: end;
+  }
+}

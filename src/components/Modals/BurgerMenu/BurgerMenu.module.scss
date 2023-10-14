@@ -1,0 +1,105 @@
+@use '../../../styles/common/variables' as *;
+@use '../../../styles/helpers/svg.global' as *;
+
+$panel_width: 375px;
+
+.burger_menu__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.burger_menu__root {
+  margin-left: auto;
+
+  &[data-visible='true'] {
+    .mobileBurger {
+      transform: translateX(0);
+    }
+  }
+
+  .mobileBurger {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 101;
+
+    display: flex;
+    flex-flow: column;
+    align-items: stretch;
+    width: $panel_width;
+
+    box-sizing: border-box;
+    overflow: hidden;
+
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    transition: 0.25s ease-in-out;
+
+    transform: translateX(100%);
+    background: #000;
+
+    @media (max-width: $WIDTH_WIDE_PHONE) {
+      width: 100%;
+    }
+
+    .mobileBurger__close {
+      height: 100px;
+      align-self: flex-end;
+      padding: 0 24px 0 24px;
+
+      @include center_and_size_svg(32px);
+      @include svg_make_clickable();
+    }
+
+    .container {
+      flex: 1;
+      overflow-y: scroll;
+
+      padding: 20px 24px 24px 24px;
+      display: flex;
+      flex-flow: column;
+      align-items: stretch;
+      gap: 24px;
+
+      .nav {
+        ul {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+
+          a {
+            color: #fff;
+            font-family: var(--font-roboto);
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+        }
+      }
+
+      .services {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+  }
+}
+
+.line {
+  width: 100%;
+  height: 2px;
+  background: $grey--divider;
+  margin: 12px 0;
+}
+
+@keyframes sweep {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}

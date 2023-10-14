@@ -1,0 +1,15 @@
+@use '../../styles/mixins/grid' as *;
+
+.logo {
+  @include make-md-column(2);
+  cursor: pointer;
+
+  h3 {
+    color: #000;
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+  }
+}

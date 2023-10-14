@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Contact Page according Figma file using React
 
-## Getting Started
+---
 
-First, run the development server:
+### Results:
+
+[Deployed App]("Deployed App")
+
+[Figma file](https://www.figma.com/file/OrSbzaWB1cx4tJ71FvRK9X/React-Technical-Assessment?node-id=1:702&mode=dev)
+
+---
+
+### Main Technologies used during the produced task:
+
+- React
+- Next.js 13
+- SCSS
+- TypeScript
+- ESLint and Prettier
+
+---
+
+
+## Run Locally
+
+Clone the project
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+  git clone https://github.com/virus231/mbunity.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Go to the project directory
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+  cd mbunity
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Install dependencies
 
-## Learn More
+```bash
+  pnpm i
+```
 
-To learn more about Next.js, take a look at the following resources:
+Start the server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+  pnpm dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+# My Project
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project utilizes Git Flow for better project management and development.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Git Flow
+
+Git Flow is a branching model and development process that helps efficiently manage a project. By using Git Flow, we can work with various types of branches to organize development and prepare for releases effectively.
+
+### Primary Git Flow Branch Types:
+
+- **main**: The branch containing the stable version of the product.
+
+- **pre-release**: The branch where active development takes place.
+
+- **Features**: Branches created for developing new features. These branches are typically deleted after merging into the development branch.
+
+### Creating Git Flow Branches:
+
+- To create the development branch (develop): `git checkout -b pre-release`
+
+- To create a feature branch (feature/feature-name): `git checkout -b feature/feature-name`
+
+- To create a hotfix branch (hotfix/fix-name): `git checkout -b hotfix/fix-name`
+
+### Example Branches I've Added:
+
+- **Release Branch (pre-release)**: `pre-release`
+
+### About
+
+Please note that the project was created using the **Next.js** development environment. By launching the application, you will be directed to the main page of the site (**Home page**). The application includes a routing system, allowing you to navigate to the **Contact page** through the provided links.
+
+On the Contact page, you will find two forms. The first form enables users to enter their First Name, Last Name, Email, Phone, select appropriate options, and include an accompanying message. The second form allows users to subscribe to the Newsletter by submitting their email address.
+
+Both forms may utilize **ZOD** for validation, which can be improved in future versions. The project also incorporates responsive design and utilizes **SCSS** for styling.

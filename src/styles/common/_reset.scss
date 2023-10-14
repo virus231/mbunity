@@ -1,0 +1,91 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+
+  * {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+*:focus {
+  outline: none;
+}
+
+.center,
+.container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+input,
+textarea {
+  -webkit-user-select: text !important;
+  -moz-user-select: text !important;
+  -ms-user-select: text !important;
+  user-select: text !important;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input[type='submit'],
+input[type='reset'] {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  border: inherit;
+}
+
+/* Inputs reset */
+input,
+textarea,
+select {
+  border: none;
+  min-width: 0;
+  padding: 0;
+  font-family: Inter, sans-serif;
+  transition: background-color 0.2s linear;
+  font-size: 16px;
+  background: transparent;
+
+  &[type='number'] {
+    -moz-appearance: textfield; /* Firefox */
+  }
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &::placeholder {
+    color: #ccc;
+    //font-family: Lack, sans-serif;
+    user-select: none;
+  }
+}

@@ -1,0 +1,359 @@
+@use '../common/variables' as *;
+
+// Boostrap Mixins and Variables are defined first.
+// Examples start at line 234.
+
+// Clearfix
+//
+// For modern browsers
+// 1. The space content is one way to avoid an Opera bug when the
+//    contenteditable attribute is included anywhere else in the document.
+//    Otherwise it causes space to appear at the top and bottom of elements
+//    that are clearfixed.
+// 2. The use of `table` rather than `block` is only necessary if using
+//    `:before` to contain the top-margins of child elements.
+//
+// Source: http://nicolasgallagher.com/micro-clearfix-hack/
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' '; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//== Media queries breakpoints
+//
+//## Define the breakpoints at which your layout will change, adapting to different screen sizes.
+
+// Extra small screen / phone
+//** Deprecated `$screen-xs` as of v3.0.1
+$screen-xs: 480px !default;
+//** Deprecated `$screen-xs-min` as of v3.2.0
+$screen-xs-min: $screen-xs !default;
+//** Deprecated `$screen-phone` as of v3.0.1
+$screen-phone: $screen-xs-min !default;
+
+// Small screen / tablet
+//** Deprecated `$screen-sm` as of v3.0.1
+$screen-sm: 560px !default;
+$screen-sm-min: $screen-sm !default;
+//** Deprecated `$screen-tablet` as of v3.0.1
+$screen-tablet: $screen-sm-min !default;
+
+// Medium screen / desktop
+//** Deprecated `$screen-md` as of v3.0.1
+$screen-md: 768px !default;
+$screen-md-min: $screen-md !default;
+//** Deprecated `$screen-desktop` as of v3.0.1
+$screen-desktop: $screen-md-min !default;
+
+// Large screen / wide desktop
+//** Deprecated `$screen-lg` as of v3.0.1
+$screen-lg: 1248px !default;
+$screen-lg-min: $screen-lg !default;
+//** Deprecated `$screen-lg-desktop` as of v3.0.1
+$screen-lg-desktop: $screen-lg-min !default;
+
+// So media queries don't overlap when required, provide a maximum
+$screen-xs-max: ($screen-sm-min - 1) !default;
+$screen-sm-max: ($screen-md-min - 1) !default;
+$screen-md-max: ($screen-lg-min - 1) !default;
+
+//== Grid system
+//
+//## Define your custom responsive grid.
+
+//** Number of columns in the grid.
+$grid-columns: 12 !default;
+//** Padding between columns. Gets divided in half for the left and right.
+$grid-gutter-width: 30px !default;
+// Navbar collapse
+//** Point at which the navbar becomes uncollapsed.
+$grid-float-breakpoint: $screen-sm-min !default;
+//** Point at which the navbar begins collapsing.
+$grid-float-breakpoint-max: ($grid-float-breakpoint - 1) !default;
+
+//== Container sizes
+//
+//## Define the maximum width of `.container` for different screen sizes.
+
+// Small screen / tablet
+$container-tablet: (720px + $grid-gutter-width) !default;
+//** For `$screen-sm-min` and up.
+$container-sm: $container-tablet !default;
+
+// Medium screen / desktop
+$container-desktop: (940px + $grid-gutter-width) !default;
+//** For `$screen-md-min` and up.
+$container-md: $container-desktop !default;
+
+// Large screen / wide desktop
+$container-large-desktop: (1140px + $grid-gutter-width) !default;
+//** For `$screen-lg-min` and up.
+$container-lg: $container-large-desktop !default;
+
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+// Centered container element
+@mixin container-fixed($gutter: $grid-gutter-width) {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+  @include clearfix;
+}
+
+// Creates a wrapper for a series of columns
+@mixin make-row($gutter: $grid-gutter-width) {
+  margin-left: ($gutter / -2);
+  margin-right: ($gutter / -2);
+  @include clearfix;
+}
+
+// Generate the extra small columns
+@mixin make-xs-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  float: left;
+  width: percentage(($columns / $grid-columns));
+  min-height: 1px;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+}
+@mixin make-xs-column-offset($columns) {
+  margin-left: percentage(($columns / $grid-columns));
+}
+@mixin make-xs-column-push($columns) {
+  left: percentage(($columns / $grid-columns));
+}
+@mixin make-xs-column-pull($columns) {
+  right: percentage(($columns / $grid-columns));
+}
+
+// Generate the small columns
+@mixin make-sm-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-sm-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-offset($columns) {
+  @media (min-width: $screen-sm-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-push($columns) {
+  @media (min-width: $screen-sm-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-sm-column-pull($columns) {
+  @media (min-width: $screen-sm-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the medium columns
+@mixin make-md-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-md-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-offset($columns) {
+  @media (min-width: $screen-md-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-push($columns) {
+  @media (min-width: $screen-md-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-md-column-pull($columns) {
+  @media (min-width: $screen-md-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Generate the large columns
+@mixin make-lg-column($columns, $gutter: $grid-gutter-width) {
+  position: relative;
+  min-height: 1px;
+  padding-left: ($gutter / 2);
+  padding-right: ($gutter / 2);
+
+  @media (min-width: $screen-lg-min) {
+    float: left;
+    width: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-offset($columns) {
+  @media (min-width: $screen-lg-min) {
+    margin-left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-push($columns) {
+  @media (min-width: $screen-lg-min) {
+    left: percentage(($columns / $grid-columns));
+  }
+}
+@mixin make-lg-column-pull($columns) {
+  @media (min-width: $screen-lg-min) {
+    right: percentage(($columns / $grid-columns));
+  }
+}
+
+// Colour column rows
+
+//[class*="col-"], .col {
+//  padding-top: 15px;
+//  padding-bottom: 15px;
+//  background-color: #eee;
+//  background-color: rgba(86,61,124,.15);
+//  border: 1px solid #ddd;
+//  border: 1px solid rgba(86,61,124,.2);
+//}
+
+// Define columns.
+// In a real app your classes should be sematic in that they would describe what you are laying out.
+// If you use smart common classes you can end up writing minimal grid rules.
+
+.three-equal-columns {
+  .col {
+    @include make-md-column(4);
+  }
+}
+
+.three-unequal-columns {
+  .col-3 {
+    @include make-md-column(3);
+  }
+
+  .col-6 {
+    @include make-md-column(6);
+  }
+}
+
+.two-columns {
+  .col-4 {
+    @include make-md-column(4);
+  }
+
+  .col-8 {
+    @include make-md-column(8);
+  }
+}
+
+.two-columns-with-two-nested-columns {
+  .col-8 {
+    @include make-md-column(8);
+  }
+
+  .col-6 {
+    @include make-md-column(6);
+  }
+
+  .col-4 {
+    @include make-md-column(4);
+  }
+}
+
+.mixed-mobile-and-desktop {
+  // When you have rules for multiple breakpoints define the smaller screen first.
+  .col-large {
+    @include make-xs-column(12);
+    @include make-md-column(8);
+  }
+
+  .col-medium {
+    @include make-xs-column(6);
+  }
+
+  .col-small {
+    @include make-xs-column(6);
+    @include make-md-column(4);
+  }
+}
+
+.mixed-mobile-tablet-and-desktop {
+  .col-one {
+    @include make-xs-column(12);
+    @include make-sm-column(6);
+    @include make-lg-column(8);
+  }
+
+  .col-two {
+    @include make-xs-column(6);
+    @include make-lg-column(4);
+  }
+
+  .col-three {
+    @include make-xs-column(6);
+    @include make-sm-column(4);
+  }
+}
+
+.offset-push-and-pull-resets {
+  .col-one {
+    @include make-sm-column(5);
+    @include make-md-column(6);
+  }
+
+  .col-two {
+    @include make-sm-column(5);
+    @include make-sm-column-offset(2);
+    @include make-md-column(6);
+    @include make-md-column-offset(0);
+  }
+
+  .col-three {
+    @include make-sm-column(6);
+    @include make-md-column(5);
+    @include make-lg-column(6);
+  }
+
+  .col-four {
+    @include make-sm-column(6);
+    @include make-md-column(5);
+    @include make-md-column-offset(2);
+    @include make-lg-column(6);
+    @include make-lg-column-offset(0);
+  }
+}
+
+@mixin container {
+  max-width: 1240px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media (min-width: $WIDTH_HD) {
+    max-width: 1440px;
+  }
+
+  @media (max-width: $WIDTH_TABLET) {
+    max-width: 100vw;
+    padding: 0 32px;
+  }
+
+  @media (max-width: $WIDTH_WIDE_PHONE) {
+    max-width: 100vw;
+    padding: 0 20px;
+  }
+}

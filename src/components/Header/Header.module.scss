@@ -1,0 +1,52 @@
+@use '../../styles/mixins/grid' as *;
+@use '../../styles/common/variables' as *;
+
+.header {
+  padding: 40px 0;
+
+  .container {
+    @include container();
+    @include container-fixed();
+    display: flex;
+    align-items: center;
+
+    .menu {
+      @include make-md-column(7);
+      margin-left: auto;
+
+      .nav {
+        display: block;
+
+        @media (max-width: $WIDTH_TABLET) {
+          display: none;
+        }
+      }
+
+      .menu__list {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
+          a {
+            font-family: var(--font-roboto);
+            color: #1f1f1f;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+
+            &.active {
+              font-weight: 600;
+              color: #000;
+            }
+          }
+        }
+      }
+    }
+  }
+}

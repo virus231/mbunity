@@ -1,0 +1,6 @@
+@use '../mixins/grid' as *;
+
+.main {
+  @include container();
+  @include container-fixed();
+}
