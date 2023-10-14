@@ -3,13 +3,14 @@
 .form__block {
   padding: 10px;
   border-radius: 10px;
-  background: #FFF;
+  background: #fff;
   box-shadow: 0px 0px 60px 30px rgba(0, 0, 0, 0.03);
   position: relative;
+  margin-bottom: 50px;
 
   &::after {
-    content: "";
-    background: url("../../assets/icons/letter-send.svg") no-repeat;
+    content: '';
+    background: url('../../assets/icons/letter-send.svg') no-repeat;
     position: absolute;
     bottom: 0;
     left: 65%;
@@ -25,16 +26,15 @@
     position: relative;
 
     &::after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       right: 0;
       width: 300px;
       height: 300px;
-      background: url("../../assets/icons/circles.svg") no-repeat right bottom;
+      background: url('../../assets/icons/circles.svg') no-repeat right bottom;
       border-bottom-right-radius: 10px;
     }
-
   }
 
   .right__block {
@@ -45,7 +45,7 @@
     margin-bottom: 110px;
 
     h5 {
-      color: #FFF;
+      color: #fff;
       font-family: var(--font-poppins);
       font-size: 28px;
       font-style: normal;
@@ -55,7 +55,7 @@
     }
 
     p {
-      color: #C9C9C9;
+      color: #c9c9c9;
       font-family: var(--font-poppins);
       font-size: 18px;
       font-style: normal;
@@ -81,9 +81,9 @@
       justify-content: center;
       width: 30px;
       height: 30px;
-      background-color: #1B1B1B;
+      background-color: #1b1b1b;
       border-radius: 50%;
-      transition: all .3s;
+      transition: all 0.3s;
 
       &:hover {
         background-color: #f2f3f5;
@@ -91,8 +91,6 @@
           fill: #000;
         }
       }
-
-
     }
   }
 }

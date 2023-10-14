@@ -1,6 +1,6 @@
 @use '../../styles/mixins/grid' as *;
 
-.header{
+.header {
   padding-top: 40px;
 
   .container {
@@ -30,10 +30,9 @@
         justify-content: space-between;
 
         &_item {
-
           a {
             font-family: var(--font-roboto);
-            color: #1F1F1F;
+            color: #1f1f1f;
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
