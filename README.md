@@ -32,7 +32,6 @@ pnpm i
 2. Start the app
 
 Use next command
-
 ```
 pnpm dev
 ```
