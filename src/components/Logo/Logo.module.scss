@@ -3,6 +3,7 @@
 
 .logo {
   @include make-md-column(2);
+  cursor: pointer;
 
   h3 {
     color: #000;

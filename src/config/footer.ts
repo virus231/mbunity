@@ -8,7 +8,7 @@ export const FOOTER_LINKS = [
         name: 'About',
       },
       {
-        link: '/contact-us',
+        link: '/contact',
         name: 'Contact',
       },
       {

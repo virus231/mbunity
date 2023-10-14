@@ -1,17 +1,19 @@
 'use client'
 import styles from './Header.module.scss';
-import {HEADER_LINKS, headerMenu} from '~/config/header';
+import {HEADER_LINKS} from '~/config/header';
 import Link from 'next/link';
 import SVG_PROFILE from '~/svg/profile.svg';
 import SVG_CART from '~/svg/cart.svg';
+import SVG_ARROW_DOWN from '~/svg/arrow-down.svg';
 import {ModalType, useModals} from '~/context/ModalProvider';
-import {useMediaQuery} from "~/hooks/useMediaQuery";
-import {WIDTH_WIDE_TABLET} from "~/constants/constants";
 import BurgerButton from "~/components/Header/BurgerButton/BurgerButton";
 import {Logo} from "~/components/Logo/Logo";
+import {usePathname} from "next/navigation";
 
 
 export const Header = () => {
+    const pathname = usePathname();
+
     const { openBurgerMenu, type } = useModals();
 
   return (
@@ -21,9 +23,11 @@ export const Header = () => {
         <div className={styles.menu}>
              <nav className={styles.nav}>
                     <ul className={styles.menu__list}>
-                        {HEADER_LINKS.map(({ name, path, id }) => (
+                        {HEADER_LINKS.map(({ name, path, id, subMenu }) => (
                             <li key={id} className={styles.menu__list_item}>
-                                <Link href={path}>{name}</Link>
+                                <Link                   className={pathname === path ? styles.active : ''}
+                                                        href={path}>{name}</Link>
+                                {subMenu && <SVG_ARROW_DOWN/>}
                             </li>
                         ))}
                         <li>

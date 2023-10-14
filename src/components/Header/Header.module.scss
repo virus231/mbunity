@@ -28,6 +28,10 @@
         justify-content: space-between;
 
         &_item {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          cursor: pointer;
           a {
             font-family: var(--font-roboto);
             color: #1f1f1f;
@@ -35,6 +39,12 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+
+            &.active {
+              font-weight: 600;
+              color: #000;
+
+            }
           }
         }
       }
