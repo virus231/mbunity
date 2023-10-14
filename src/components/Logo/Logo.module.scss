@@ -1,6 +1,5 @@
 @use '../../styles/mixins/grid' as *;
 
-
 .logo {
   @include make-md-column(2);
   cursor: pointer;

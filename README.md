@@ -12,28 +12,39 @@
 
 ### Main Technologies used during the produced task:
 
--   React
--   Next.js 13
--   SCSS
--   TypeScript
--   ESLint and Prettier
+- React
+- Next.js 13
+- SCSS
+- TypeScript
+- ESLint and Prettier
 
 ---
 
-### Instructions to run the code
 
-1. Install packages
+## Run Locally
 
-Use next command
+Clone the project
 
+```bash
+  git clone https://github.com/virus231/mbunity.git
 ```
-pnpm i
-```
-2. Start the app
 
-Use next command
+Go to the project directory
+
+```bash
+  cd mbunity
 ```
-pnpm dev
+
+Install dependencies
+
+```bash
+  pnpm i
+```
+
+Start the server
+
+```bash
+  pnpm dev
 ```
 
 ---

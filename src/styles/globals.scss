@@ -101,7 +101,7 @@ main {
 }
 
 .title {
-  @include h1()
+  @include h1();
 }
 
 @import 'common/fonts';

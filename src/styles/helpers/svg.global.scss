@@ -7,7 +7,6 @@
   flex-flow: row;
   align-items: center;
   justify-content: center;
-
 }
 
 .svg-fit-font-size {
@@ -21,7 +20,7 @@
 @mixin svg_make_clickable {
   svg {
     cursor: pointer;
-    transition: all .3s;
+    transition: all 0.3s;
 
     @media (hover: hover) and (pointer: fine) {
       &:hover {

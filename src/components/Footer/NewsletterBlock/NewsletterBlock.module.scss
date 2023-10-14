@@ -1,11 +1,10 @@
 @use '../../../styles/common/variables' as *;
 
-
 .newsletter {
   border-radius: 10px;
   background: #131313;
   padding: 14px;
-  
+
   @media (max-width: $WIDTH_TABLET) {
     width: 350px;
   }
@@ -34,7 +33,7 @@
       font-size: 0.75rem;
       line-height: 1rem;
       height: 39px;
-      background: #1E1E1E;
+      background: #1e1e1e;
 
       &::placeholder {
         color: #616161;
@@ -61,7 +60,7 @@
   }
 
   .description {
-    color: #FFF;
+    color: #fff;
     font-family: var(--font-poppins);
     font-size: 13px;
     font-style: normal;

@@ -4,7 +4,7 @@ import { Header } from '~/components/Header/Header';
 import styles from '../styles/pages/contact.module.scss';
 import { inter, poppins, roboto } from '~/config/fonts';
 import { Footer } from '~/components/Footer/Footer';
-import {ModalsProvider} from "~/context/ModalProvider";
+import { ModalsProvider } from '~/context/ModalProvider';
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -21,13 +21,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${roboto.variable} ${poppins.variable} ${poppins.variable}`}
       >
-      <ModalsProvider>
+        <ModalsProvider>
           <Header />
-          <main className={styles.main}>
-              {children}
-          </main>
+          <main className={styles.main}>{children}</main>
           <Footer />
-      </ModalsProvider>
+        </ModalsProvider>
       </body>
     </html>
   );

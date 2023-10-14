@@ -1,6 +1,5 @@
 @use '../../../styles/common/variables' as *;
 
-
 .form {
   padding-top: 60px;
   padding-left: 50px;
@@ -10,7 +9,6 @@
     padding-left: 10px;
     padding-right: 10px;
     padding-top: 30px;
-
   }
 
   &__fields {
@@ -20,7 +18,6 @@
 
     @media (max-width: $WIDTH_TABLET) {
       grid-template-columns: repeat(1, minmax(0, 1fr));
-
     }
   }
 

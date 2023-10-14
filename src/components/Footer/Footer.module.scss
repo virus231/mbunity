@@ -9,7 +9,6 @@
   padding-bottom: 66px;
   margin-top: auto;
 
-
   .logo {
     display: flex;
     justify-content: center;
@@ -47,7 +46,6 @@
     border-top-width: 1px;
     border-color: #f3f4f6;
 
-
     @media (max-width: $WIDTH_TABLET) {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -75,8 +73,6 @@
         display: flex;
         flex-direction: column;
         gap: 25px;
-
-
 
         div {
           display: flex;
@@ -110,8 +106,6 @@
             font-style: normal;
             font-weight: 400;
             line-height: normal;
-
-
           }
         }
       }
