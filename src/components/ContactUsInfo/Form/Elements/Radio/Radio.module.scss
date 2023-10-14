@@ -37,11 +37,11 @@
       border-radius: 9999px;
       width: 13px;
       height: 13px;
-      background-color: #E0E0E0;
+      background-color: #e0e0e0;
 
       &::after {
-        content: "";
-        background: url("../../../../../assets/icons/check.svg") no-repeat;
+        content: '';
+        background: url('../../../../../assets/icons/check.svg') no-repeat;
         position: absolute;
         top: 0.25rem;
         transition-property: all;

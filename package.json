@@ -12,7 +12,7 @@
     "check-types": "tsc --pretty --noEmit",
     "check-format": "prettier --check .",
     "check-lint": "eslint . --ext .js,.jsx,.ts,.tsx",
-    "check": "yarn check-types && yarn check-format && yarn check-lint"
+    "check": "pnpm check-types && pnpm check-format && pnpm check-lint"
   },
   "dependencies": {
     "next": "13.5.4",

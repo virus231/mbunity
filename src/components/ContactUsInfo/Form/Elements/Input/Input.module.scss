@@ -1,5 +1,3 @@
-
-
 .field {
   cursor: pointer;
   &:hover {
@@ -9,13 +7,13 @@
   }
 
   .label {
-    color: #8D8D8D;
+    color: #8d8d8d;
     font-family: var(--font-poppins);
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
     line-height: 20px;
-    transition: all .3s;
+    transition: all 0.3s;
   }
 
   .element {
@@ -24,7 +22,7 @@
     .input {
       display: inline-block;
       padding-bottom: 0.625rem;
-      border-bottom: 1px solid #8D8D8D;
+      border-bottom: 1px solid #8d8d8d;
       outline-style: none;
       width: 100%;
       transition-property: all;
@@ -38,7 +36,6 @@
       font-style: normal;
       font-weight: 500;
       line-height: 20px;
-
     }
   }
 }
