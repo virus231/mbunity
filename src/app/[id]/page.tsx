@@ -11,10 +11,10 @@ export default function InProgressPage() {
         fontFamily: 'var(--font-poppins)',
         width: '100%',
         textAlign: 'center',
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          height: "50vh"
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        height: '50vh',
       }}
     >
       Page {id.toString().charAt(0).toUpperCase() + id.toString().substring(1)}{' '}
