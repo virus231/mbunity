@@ -1,13 +1,15 @@
 @use '../../../styles/common/variables' as *;
+@use '../../../styles/mixins/grid' as *;
 
 .newsletter {
   border-radius: 10px;
   background: #131313;
   padding: 14px;
+  @include make-md-column(4);
 
-  @media (max-width: $WIDTH_TABLET) {
-    width: 350px;
-  }
+  //@media (max-width: $WIDTH_TABLET) {
+  //  width: 350px;
+  //}
 
   h6 {
     color: #fff;

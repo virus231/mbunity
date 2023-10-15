@@ -16,6 +16,7 @@ export const RadioGroup: FC<RadioProps> = ({
   ...otherProps
 }) => {
   const [selectedOption, setSelectedOption] = useState<string>('');
+  const [checked, setChecked] = useState(false);
 
   const handleOptionChange = (event: ChangeEvent<HTMLInputElement>) => {
     const value = event.target.value;

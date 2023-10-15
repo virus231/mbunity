@@ -38,22 +38,78 @@
   }
 
   &__info {
-    display: grid;
+    display: flex;
+    justify-content: space-between;
     padding-top: 20px;
-    gap: 2rem;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
-
     border-top-width: 1px;
     border-color: #f3f4f6;
 
     @media (max-width: $WIDTH_TABLET) {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      flex-wrap: wrap;
     }
 
     &_block {
+      display: flex;
+      gap: 20px;
+      justify-content: space-between;
       text-align: center;
-      display: inline-flex;
-      flex-direction: column;
+      @include make-md-column(9);
+
+      @media (max-width: $WIDTH_TABLET) {
+        flex-wrap: wrap;
+      }
+
+      &_reach {
+        display: flex;
+        flex-direction: column;
+        width: 250px;
+
+        @media (max-width: $WIDTH_TABLET) {
+          width: 200px;
+        }
+      }
+
+      &_links {
+        margin-bottom: 30px;
+        .title {
+          color: #fff;
+          font-family: var(--font-poppins);
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 26px;
+          margin-bottom: 20px;
+
+          @media (max-width: $WIDTH_TABLET) {
+            text-align: left;
+          }
+        }
+
+        .list {
+          display: flex;
+          flex-direction: column;
+          gap: 25px;
+
+          li {
+            @media (max-width: $WIDTH_TABLET) {
+              text-align: left;
+            }
+            a {
+              color: #fff;
+              font-family: var(--font-poppins);
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: normal;
+              transition: all 0.3s;
+
+              &:hover {
+                color: #808080;
+              }
+            }
+          }
+        }
+      }
 
       h6 {
         color: #fff;
@@ -86,26 +142,6 @@
             a {
               text-align: left;
             }
-          }
-        }
-      }
-
-      .list {
-        display: flex;
-        flex-direction: column;
-        gap: 25px;
-
-        li {
-          @media (max-width: $WIDTH_TABLET) {
-            text-align: left;
-          }
-          a {
-            color: #fff;
-            font-family: var(--font-poppins);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
           }
         }
       }

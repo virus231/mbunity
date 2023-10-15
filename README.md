@@ -20,7 +20,6 @@
 
 ---
 
-
 ## Run Locally
 
 Clone the project
