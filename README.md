@@ -1,4 +1,4 @@
-# Contact Page according Figma file using React
+# Contact Page according Figma file using Next.js 13
 
 ---
 
