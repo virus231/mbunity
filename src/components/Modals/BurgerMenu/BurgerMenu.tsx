@@ -34,10 +34,10 @@ const BurgerMenu = ({ isVisible }: TProps) => {
                   <li key={item.id}>
                     <Link
                       href={item.path}
+                      onClick={closeModal}
                       // className={pathname === item.link ? styles.active : ''}
                     >
                       {item.name}
-                      {/*{item.subMenu && getIcon(EnumIcons.arrow)}*/}
                     </Link>
                   </li>
                 );
