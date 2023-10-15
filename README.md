@@ -75,6 +75,7 @@ Git Flow is a branching model and development process that helps efficiently man
 ### Example Branches I've Added:
 
 - **Release Branch (pre-release)**: `pre-release`
+- **Feature Branch (feat/header)**: `feat/header`
 
 ### About
 
