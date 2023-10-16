@@ -17,6 +17,7 @@
 - SCSS
 - TypeScript
 - ESLint and Prettier
+- In the Future (React Hook Form) if need
 
 ---
 
